@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  --darkGrey: #161616;
+  --lightGrey: #CCC;
+  color: var(--darkGrey);
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  background-color: var(--lightGrey);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  background-color: black;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#logo {
+  width: 70px;
+  border-radius: 150px;
+  margin-left: 20px;
+}
+
+
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: var(--lightGrey);
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--lightGrey);
+  font-weight: 500;
+  margin: 0 10px;
+  transition: 300ms;
+}
+
+nav a:hover {
+  font-weight: 800;
+}
+
+nav a:not(:hover) {
+  opacity: 0.5;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 100%;
+  display: block;
+  margin-top: 0.5px;
+}
+
+.Agen {
+  margin-top: 10px;
+  margin-left: -180px;
+}
+
+.Agen button{
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  background: #161616;
+  color: white;
+}
+
+
+main {
+  width: 100%;
+  max-width: 940px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner {
+  width: 50%;
+  max-height: 400px;
+  object-fit: cover;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.utensilios {
+  width: 100%;
+  max-width: 350px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+#about {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.title {
+  font-weight: 800;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+#about>p {
+  margin: 20px 0;
+  text-align: left;
+}
+
+#benefits {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#benefits img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 5px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+  margin-bottom: 20px;
+}
+
+#benefits .list {
+  width: 100%;
+  max-width: 250px;
+  font-weight: 600;
+  text-align: left;
+}
+
+#vidContainer {
+  width: 100%;
+  padding-bottom: 56.25%;
+  position: relative;
+  margin: 30px 0;
+}
+
+#vidContainer iframe {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+footer {
+  margin-top: auto;
+  background-color: var(--darkGrey);
+  padding: 15px;
+  width: 100%;
+
+}
+
+footer .icon ul {
+  display: flex;
+  margin-left: 30%;
+}
+
+footer img {
+  width: auto;
+  max-width: 80px;
+  max-height: 80px;
+}
+
+footer p {
+  text-align: center;
+  color: #CCC;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: 600;
+  transition: 300ms;
+  color: #CCC;
+}
+
+footer a:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: black;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  nav.show {
+    display: flex;
+    max-height: 300px;
+    /* ajuste conforme necessário */
+  }
+}
